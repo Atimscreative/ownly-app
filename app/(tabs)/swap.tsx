@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
 
-export default function Index() {
-  return <View>Home</View>;
+export default function Swap() {
+  return <View>Swap</View>;
 }
