@@ -3,4 +3,5 @@ export const COLORS = {
   secondary: "",
   body: "#FFFFFF",
   background: "#121212",
+  container: "#B1C9FC14",
 };
