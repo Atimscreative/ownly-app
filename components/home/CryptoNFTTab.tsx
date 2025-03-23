@@ -1,6 +1,7 @@
 import { COLORS } from "@/constants/theme";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import CryptoList from "./CryptoList";
 
 const CryptoNFTTabs = () => {
   const [activeTab, setActiveTab] = useState("crypto");
@@ -37,7 +38,10 @@ const CryptoNFTTabs = () => {
       {/* Tab Content */}
       <View style={styles.contentContainer}>
         {activeTab === "crypto" ? (
-          <Text style={styles.contentText}>🚀 Crypto Content</Text>
+          <View>
+            <Text style={styles.contentText}>🚀 Crypto Content</Text>
+            <CryptoList />
+          </View>
         ) : (
           <Text style={styles.contentText}>🎨 NFT Content</Text>
         )}
