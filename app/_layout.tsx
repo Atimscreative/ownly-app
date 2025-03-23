@@ -1,39 +1,39 @@
-import { COLORS } from "@/constants/theme";
-import { DMSans_500Medium, DMSans_700Bold } from "@expo-google-fonts/dm-sans";
-import { Poppins_400Regular } from "@expo-google-fonts/poppins";
-import { useFonts } from "expo-font";
+// import { COLORS } from "@/constants/theme";
+// import { DMSans_500Medium, DMSans_700Bold } from "@expo-google-fonts/dm-sans";
+// import { Poppins_400Regular } from "@expo-google-fonts/poppins";
+// import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
+// import * as SplashScreen from "expo-splash-screen";
+// import { useEffect } from "react";
 import {
-  ActivityIndicator,
+  // ActivityIndicator,
   SafeAreaView,
   StyleSheet,
-  View,
+  // View,
 } from "react-native";
 
-SplashScreen.preventAutoHideAsync();
+// SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [loaded, error] = useFonts({
-    Poppins_400Regular,
-    DMSans_500Medium,
-    DMSans_700Bold,
-  });
+  // const [loaded, error] = useFonts({
+  //   Poppins_400Regular,
+  //   DMSans_500Medium,
+  //   DMSans_700Bold,
+  // });
 
-  useEffect(() => {
-    if (loaded || error) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded, error]);
+  // useEffect(() => {
+  //   if (loaded || error) {
+  //     SplashScreen.hideAsync();
+  //   }
+  // }, [loaded, error]);
 
-  if (!loaded) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size="large" />
-      </View>
-    );
-  }
+  // if (!loaded) {
+  //   return (
+  //     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+  //       <ActivityIndicator size="large" />
+  //     </View>
+  //   );
+  // }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -42,10 +42,7 @@ export default function RootLayout() {
           name="(tabs)"
           options={{ title: "tabs", headerShown: false }}
         />
-        <Stack.Screen
-          name="+non-found"
-          options={{ title: "Oops! Not found" }}
-        />
+        {/* <Stack.Screen name="+non-found" /> */}
       </Stack>
     </SafeAreaView>
   );
@@ -53,6 +50,7 @@ export default function RootLayout() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: "",
   },
 });
